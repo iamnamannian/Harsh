@@ -1,0 +1,73 @@
+<html>
+<head>
+	<style>
+		button.op_button{background-color:green; color:white; padding:10px; padding-left:14px; padding-right:14px; border:1px solid green; border-radius:10px;}
+		button.op_button{font-weight:bold; font-size:95%;}
+		.buttons_list{text-align:center;}
+		@media screen and (max-width:749px){button.op_button{font-size:100%;}}
+		h2{text-align:center;}
+		#res{border:2px solid green;border-radius:2px;padding:8px;padding-left:16px;padding-right:16px;}
+		.calculator_content_box{border:1px solid black;border-radius:5px;padding:10px;}
+		.calculator_content_box{width:235px;margin-left:auto;margin-right:auto;}
+		.num1{margin-right:90px;}
+		.input1{margin-right:80px;}
+		.middle{text-align:center;padding-right:10px;}
+	</style>
+</head>
+<body>
+<div class="calculator_box">
+	<div class="calculator_content_box">
+	<h2>Simple Calculator</h2><hr/>
+	<span class="num1">Number 1</span> <span class="num2">Number 2</span><br/><br/>
+	<span class="input1"><input type="tel" name="num1" id="num1" style="padding:5px;width:60px;border-radius:4px;" /></span>
+	<span class="input2"><input type="tel" name="num2" id="num2" style="padding:5px;width:60px;border-radius:4px;" /></span><br/><br/>
+	<div class="buttons_list">
+	<button class="op_button" onclick="addFun()">+</button>
+	<button class="op_button" onclick="subFun()">-</button>
+	<button class="op_button" onclick="mulFun()">*</button>
+	<button class="op_button" onclick="divFun()">/</button>
+	<button class="op_button" onclick="modFun()">%</button>
+	</div><br/>
+	<p class="middle"><span class="restext">Result</span><br/><br/>
+	<span id="res"></span></p>
+	</div>
+</div>
+<script>
+function addFun()
+{
+	var a = document.getElementById("num1").value;
+	var b = document.getElementById("num2").value;
+	var r = +a + +b;
+	document.getElementById("res").innerHTML = r;
+}
+function subFun()
+{
+	var a = document.getElementById("num1").value;
+	var b = document.getElementById("num2").value;
+	var r = +a - +b;
+	document.getElementById("res").innerHTML = r;
+}
+function mulFun()
+{
+	var a = document.getElementById("num1").value;
+	var b = document.getElementById("num2").value;
+	var r = +a * +b;
+	document.getElementById("res").innerHTML = r;
+}
+function divFun()
+{
+	var a = document.getElementById("num1").value;
+	var b = document.getElementById("num2").value;
+	var r = +a / +b;
+	document.getElementById("res").innerHTML = r;
+}
+function modFun()
+{
+	var a = document.getElementById("num1").value;
+	var b = document.getElementById("num2").value;
+	var r = +a % +b;
+	document.getElementById("res").innerHTML = r;
+}
+</script>
+</body>
+</html>
